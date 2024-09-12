@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Components/Navbar.jsx'
-import Footer from './Components/Footer.jsx'
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './pages/Cart.jsx'
 import ProductDisplay from './pages/ProductDisplay.jsx';
@@ -37,7 +37,7 @@ function App() {
       
         
       </Routes>
-      <Footer /> 
+  
       </BrowserRouter>
 
     </div>

@@ -38,6 +38,10 @@ function Cart() {
 
 
   return (
+    <>
+    
+    {cart<=0 ? <div className='w-[100%] h-[60vh] flex justify-center items-center'>
+      <h1 className='text-4xl animate-bounce md:text-5xl'>You Cart is Empty</h1></div> :
     <div>
 
 
@@ -67,7 +71,7 @@ function Cart() {
                 </div>
 
                 <p>{cartData.price * CartItems[cartData.id]}</p>
-                {/* <button className='bg-red-700 p-2 text-white rounded'>Remove</button> */}
+                <button onClick={()=>dispatch({type:"remove",id:cartData.id})} className='bg-red-700 p-2 text-white rounded'>Remove</button>
 
               </div>
               
@@ -78,9 +82,12 @@ function Cart() {
     
 
       </div>
+      <button className='w-[100%] text-center h-auto bg-black p-2 text-white'>place order</button>
 
       
     </div>
+}
+    </>
   )
 }
 
